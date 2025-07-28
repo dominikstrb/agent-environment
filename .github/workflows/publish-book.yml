@@ -4,15 +4,12 @@ on:
   push:
     branches:
     - main
-
-permissions:
-  pages: write
-  id-token: write
       
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v4
 
